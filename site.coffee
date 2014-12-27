@@ -33,7 +33,7 @@ turnDeviceOff = (id) ->
   telldus.turnOffSync (Number) id
 dimDevice = (id, bri) ->
   console.log "Dimming id: %s to %s", id, bri
-  telldus.turnOffSync (Number) id, (Number) bri
+  telldus.dimSync (Number) id, (Number) bri
 
 socket = new WebSocket "wss://houm.herokuapp.com"
 socket.on 'open', onSocketOpen
