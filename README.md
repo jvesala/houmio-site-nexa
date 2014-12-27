@@ -2,7 +2,10 @@
 
     npm install -g coffee-script
     npm install
-    Insert your HORSELIGHTS_SITEKEY into supervisor.conf
+    Edit supervisor.conf
+    HORSELIGHTS_SITEKEY=<yoursitekey> coffee site.coffee
+
+    (Or alternatively update supervirot and insert your HORSELIGHTS_SITEKEY into supervisor.conf in env)
 
     Press + -> Light -> General Device
     Select Binary or Dimmable
