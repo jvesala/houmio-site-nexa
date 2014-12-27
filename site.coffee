@@ -19,21 +19,24 @@ onSocketMessage = (s) ->
     message = JSON.parse s
     console.log "Received message: %j", message
     if (message.data.type == "binary" && message.data.on == true)
-      turnDeviceOn message.data.devaddr
+      turnDeviceOn (Number) message.data.devaddr
     if (message.data.type == "binary" && message.data.on == false)
-      turnDeviceOff message.data.devaddr
+      turnDeviceOff (Number) message.data.devaddr
     if (message.data.type == "dimmable")
-      dimDevice message.data.devaddr, message.data.bri
+      dimDevice (Number) message.data.devaddr, (Number) message.data.bri
 
 turnDeviceOn = (id) ->
   console.log "Turning on id: %s", id
-  telldus.turnOnSync (Number) id
+  telldus.turnOnSync id
 turnDeviceOff = (id) ->
   console.log "Turning off id: %s", id
-  telldus.turnOffSync (Number) id
+  telldus.turnOffSync id
 dimDevice = (id, bri) ->
   console.log "Dimming id: %s to %s", id, bri
-  telldus.dimSync (Number) id, (Number) bri
+  if (bri == 0)
+    telldus.turnOffSync id
+  else
+    telldus.dimSync id, bri
 
 socket = new WebSocket "wss://houm.herokuapp.com"
 socket.on 'open', onSocketOpen
