@@ -5,6 +5,8 @@
     HORSELIGHTS_SITEKEY=<yoursitekey> coffee site.coffee
 
     Press + -> Light -> General Device
-    Vendor: Nexa
-    ID should match one configured in /etc/tellstick.conf.
+    Select Binary or Dimmable
+    Vendor: nexa
+    Vendor address: should match id configured in /etc/tellstick.conf (see tdtool -l)
+
 
