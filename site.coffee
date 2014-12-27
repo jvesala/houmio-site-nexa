@@ -20,9 +20,9 @@ onSocketMessage = (s) ->
     console.log "Received message: %j", message
     # Here goes your code
     if (message.data.type == "binary" && message.data.on == true)
-      turnDeviceOn message.devaddr
+      turnDeviceOn message.data.devaddr
     if (message.data.type == "binary" && message.data.on == false)
-      turnDeviceOff message.devaddr
+      turnDeviceOff message.data.devaddr
 
 turnDeviceOn = (id) ->
   console.log "Turning on id: %s", id
