@@ -23,7 +23,7 @@ onSocketMessage = (s) ->
     if (message.data.type == "binary" && message.data.on == false)
       turnDeviceOff (Number) message.data.devaddr
     if (message.data.type == "dimmable")
-      dimDevice (Number) message.data.devaddr, (Number) message.data.bri
+      dimDevice ((Number) message.data.devaddr), message.data.bri
 
 turnDeviceOn = (id) ->
   console.log "Turning on id: %s", id
