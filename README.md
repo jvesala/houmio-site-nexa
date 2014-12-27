@@ -3,3 +3,8 @@
     npm install -g coffee-script
     npm install
     HORSELIGHTS_SITEKEY=<yoursitekey> coffee site.coffee
+
+    Press + -> Light -> General Device
+    Vendor: Nexa
+    ID should match one configured in /etc/tellstick.conf.
+

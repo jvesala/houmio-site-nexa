@@ -1,22 +1,23 @@
 {
-  "name": "houmio-site-template",
+  "name": "houmio-site-nexa",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nexa integration for houmio",
   "main": "site.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/houmio/houmio-site-template.git"
+    "url": "https://github.com/jvesala/houmio-site-nexa.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/houmio/houmio-site-template/issues"
+    "url": "https://github.com/jvesala/houmio-site-nexa/issues"
   },
-  "homepage": "https://github.com/houmio/houmio-site-template",
+  "homepage": "https://github.com/jvesala/houmio-site-nexa",
   "dependencies": {
-    "ws": "^0.6.3"
+    "ws": "^0.6.3",
+    "telldus": "0.0.9"
   }
 }
