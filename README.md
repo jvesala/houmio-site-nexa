@@ -1,8 +1,10 @@
     Install telldus - http://lassesunix.wordpress.com/2013/08/12/installing-telldus-core-on-raspberry-pi/
 
+    Checkout this project to /home/pi/houmio-site-nexa (or update supervisor.conf)
+
     npm install -g coffee-script
     npm install
-    HORSELIGHTS_SITEKEY=<yoursitekey> coffee site.coffee
+    Insert your HORSELIGHTS_SITEKEY into supervisor.conf
 
     Press + -> Light -> General Device
     Select Binary or Dimmable
