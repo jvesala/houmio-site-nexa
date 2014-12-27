@@ -19,13 +19,17 @@ onSocketMessage = (s) ->
     message = JSON.parse s
     console.log "Received message: %j", message
     # Here goes your code
-    if (message.type == "binary" && message.on == true)
+    if (message.data.type == "binary" && message.data.on == true)
       turnDeviceOn message.devaddr
-    if (message.type == "binary" && message.on == false)
+    if (message.data.type == "binary" && message.data.on == false)
       turnDeviceOff message.devaddr
 
-turnDeviceOn = (id) -> telldus.turnOnSync id
-turnDeviceOff = (id) -> telldus.turnOffSync id
+turnDeviceOn = (id) ->
+  console.log "Turning on id: %s", id
+  telldus.turnOnSync id
+turnDeviceOff = (id) ->
+  console.log "Turning off id: %s", id
+  telldus.turnOffSync id
 
 socket = new WebSocket "wss://houm.herokuapp.com"
 socket.on 'open', onSocketOpen
