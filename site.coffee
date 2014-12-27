@@ -26,10 +26,10 @@ onSocketMessage = (s) ->
 
 turnDeviceOn = (id) ->
   console.log "Turning on id: %s", id
-  telldus.turnOnSync id
+  telldus.turnOnSync (Number) id
 turnDeviceOff = (id) ->
   console.log "Turning off id: %s", id
-  telldus.turnOffSync id
+  telldus.turnOffSync (Number) id
 
 socket = new WebSocket "wss://houm.herokuapp.com"
 socket.on 'open', onSocketOpen
