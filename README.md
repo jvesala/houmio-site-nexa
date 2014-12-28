@@ -5,6 +5,8 @@
     Edit supervisor.conf
     HORSELIGHTS_SITEKEY=<yoursitekey> coffee site.coffee
 
+    supervisorctl restart houmio-site-nexa
+
     (Or alternatively update supervirot and insert your HORSELIGHTS_SITEKEY into supervisor.conf in env)
 
     Press + -> Light -> General Device
